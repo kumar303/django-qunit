@@ -25,8 +25,8 @@ def get_suite_context(request, path):
     # load suite.json if present
     if 'suite.json' in files:
         file = open(os.path.join(full_path, 'suite.json'), 'r')
-        json = file.read()
-        suite.update(json.loads(json))
+        json_data = file.read()
+        suite.update(json.loads(json_data))
 
     previous_directory = parent_directory(path)
 
